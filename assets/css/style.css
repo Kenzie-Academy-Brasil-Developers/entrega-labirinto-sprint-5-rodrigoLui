@@ -1,0 +1,61 @@
+html, body, div, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    --playerColor: #2061ec;
+    --backgroundTela: #551b1b;
+    --pisoColor: #c5dff5;
+    --paredeColor: #000000;
+    --inicioColor: #b82545;
+    --fimColor: #ff0000;
+}
+
+#tela {
+    background-color: var(--backgroundTela);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dimensao {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 630px;
+    height: 450px;
+    position: relative;
+}
+
+.parede {
+    background-color: var(--paredeColor);
+    width: 30px;
+    height: 30px;
+}
+.piso {
+    background-color: var(--pisoColor);
+    width: 30px;
+    height: 30px;
+}
+#inicio {
+    width: 30px;
+    height: 30px;
+    background-color: var(--inicioColor);
+}
+#fim {
+    width: 30px;
+    height: 30px;
+    background-color: var(--fimColor);
+}
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: var(--playerColor);
+    position: absolute;
+    top: 270px;
+    left: 0;
+}
