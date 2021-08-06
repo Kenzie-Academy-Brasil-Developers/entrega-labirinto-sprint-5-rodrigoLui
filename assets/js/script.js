@@ -1,4 +1,5 @@
 function jogaNaTela() {
+    const vitoria = document.getElementById('vitoria')
     const tela = document.getElementById('dimensao')
     const div = document.createElement('div')
     const map = [
@@ -58,8 +59,10 @@ function jogaNaTela() {
                 movimento(alvo('ArrowLeft'))
             break;
             case 'ArrowRight':
-    
                 movimento(alvo('ArrowRight'))
+                if (alvo('ArrowRight') === '8:21') {
+                    vitoria.style.display = 'flex'
+                }
             break;
             case 'ArrowUp':
                 movimento(alvo('ArrowUp'))
@@ -71,6 +74,11 @@ function jogaNaTela() {
                 break;
         }
     });
+
+    vitoria.addEventListener('click', function () {
+        vitoria.style.display = 'none'
+        location.reload()
+    })
 
     function alvo(seta) {
         const Player = document.querySelector('.player')
@@ -137,8 +145,4 @@ function movimento(alvo) {
 
         posicaoAlvo.classList.add('player')
     }
-}
-
-function vitoria(alvo) {
-    
 }

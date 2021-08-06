@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, h4 {
+html, body, div, h1, h2, h3, h4, figure, img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,8 +19,10 @@ html, body, div, h1, h2, h3, h4 {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 #dimensao {
     display: flex;
@@ -29,6 +31,37 @@ html, body, div, h1, h2, h3, h4 {
     width: 630px;
     height: 450px;
     position: relative;
+}
+
+#vitoria {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1414147a;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--paredeColor);
+}
+.txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 630px;
+    /* justify-content: space-evenly; */
+}
+.parabens {
+    width: 89%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 44px;
+    padding: 35px;
+    color: var(--fimColor);
+    background-color: #00000075;
+    box-shadow: 0 0 10px 10px #141414d5 inset;
+}
+.img {
+    width: 100%;
+    height: 100%;
 }
 
 .parede {
