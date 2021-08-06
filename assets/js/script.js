@@ -55,16 +55,17 @@ function jogaNaTela() {
         const box = document.getElementById('player')
         switch (keyName) {
             case 'ArrowLeft':
-                alvo('ArrowLeft')
+                movimento(alvo('ArrowLeft'))
             break;
             case 'ArrowRight':
-                alvo('ArrowRight')
+    
+                movimento(alvo('ArrowRight'))
             break;
             case 'ArrowUp':
-                alvo('ArrowUp')
+                movimento(alvo('ArrowUp'))
             break;
             case 'ArrowDown':
-                alvo('ArrowDown')
+                movimento(alvo('ArrowDown'))
             break;
             default:
                 break;
@@ -80,18 +81,29 @@ function jogaNaTela() {
         let alvo = 0
 
         if (seta === 'ArrowUp') {
-            alvo = `${Number(linha - 1)}:${coluna}`
+            let nL = Number(linha) - 1
+            alvo = `${nL}:${coluna}`
+       
             return alvo
         }
         if (seta === 'ArrowRight') {
-            alvo = `${Number(linha - 1)}:${coluna}`
+
+            let nR = Number(coluna) + 1
+            alvo = `${linha}:${nR}`
+            console.log(alvo)
             return alvo
         }
         if (seta === 'ArrowDown') {
-            alvo = `${Number(linha + 1)}:${coluna}`
+            let nL = Number(linha) + 1
+            alvo = `${nL}:${coluna}`
+
+            return alvo
         }
         if (seta === 'ArrowLeft') {
-            alvo = `${linha}:${Number(coluna - 1)}`
+            let nR = Number(coluna) - 1
+            alvo = `${linha}:${nR}`
+
+            return alvo
         }
     }
 } jogaNaTela()
@@ -115,9 +127,18 @@ function verifique(divMuve) {
 }
 
 function movimento(alvo) {
-    
-    if(verifique(alvo)){
-        
-    }
+    const Player = document.querySelector('.player')
+    let posicaoAlvo = filtro(alvo)
 
+    if(verifique(posicaoAlvo) === false){
+
+        Player.classList.remove('player')
+
+
+        posicaoAlvo.classList.add('player')
+    }
+}
+
+function vitoria(alvo) {
+    
 }
