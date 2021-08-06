@@ -41,6 +41,7 @@ html, body, div, h1, h2, h3, h4 {
     width: 30px;
     height: 30px;
 }
+.player { background-color: var(--playerColor); }
 #inicio {
     width: 30px;
     height: 30px;
@@ -50,12 +51,4 @@ html, body, div, h1, h2, h3, h4 {
     width: 30px;
     height: 30px;
     background-color: var(--fimColor);
-}
-#player {
-    width: 30px;
-    height: 30px;
-    background-color: var(--playerColor);
-    position: absolute;
-    top: 270px;
-    left: 0;
 }
